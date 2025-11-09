@@ -1,0 +1,39 @@
+<div class="card h-100 shadow-sm">
+  <img
+    src="{{ event.imageUrl }}"
+    class="card-img-top img-fluid"
+    style="height: 200px; object-fit: cover"
+  />
+
+  <div class="card-body">
+    <h5 class="card-title">{{ event.title | capitalizeFirst }}</h5>
+    <p class="text-muted">{{ event.place }}</p>
+    <p>{{ event.date }}</p>
+    <p class="fw-bold"></p>
+    <p>{{ event.description }}</p>
+    <p>{{ event.price }}</p>
+    <p>{{ event.nbPlaces }}</p>
+    <p>nbr likes: {{ event.nbLikes }}</p>
+
+    <!-- Bouton Like -->
+    <button
+      class="btn btn-sm btn-primary"
+      (click)="likeEvent(event)"
+      [disabled]="dateExpire(event)"
+    >
+      👍 Like
+    </button>
+    <button 
+      class="btn btn-sm btn-success" 
+      [routerLink]="['./participate', event.id, event.price]"
+      [disabled]="event.nbPlaces == 0"
+    >
+      🎫 Réserver
+    </button>
+    <button class="btn btn-sm btn-primary" [routerLink]="['./', event.id]">
+      📋 Détails
+    </button>
+
+    <span class="ms-2">put your data</span>
+  </div>
+</div>
