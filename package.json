@@ -1,6 +1,7 @@
 {
   "name": "workshop-twin",
   "version": "0.0.0",
+  "description": "Application de gestion d'événements avec Angular et Spring Boot",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
