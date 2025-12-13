@@ -19,6 +19,7 @@
     <description>Backend Spring Boot pour l'application WorkshopTwin</description>
     
     <properties>
+        <!-- Java version configuration -->
         <java.version>17</java.version>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
