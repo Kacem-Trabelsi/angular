@@ -41,8 +41,9 @@ testem.log
 .DS_Store
 Thumbs.db
 
-# Backend - Exclure tout le dossier backend
-backend/
+# Backend build files
+backend/target/
+backend/.mvn/
 
 # Environment files
 .env
